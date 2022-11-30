@@ -8,7 +8,7 @@ function PWLengthCriteria() {
     //now i'm checking to see if what was entered meets the following criteria that would destroy the functionality of our code: if nothing was entered, smaller than 8, bigger than 128, and entering anything other than numbers
     if (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
          //when this criteria is met then we need to alert the user and remind them not to enter either of these mistakes
-         alert("Listen buddy, I said to enter in a number from 8-128 and to only use numbers! ")
+         alert("Listen buddy, I said to enter in a number from 8-128 and make sure to only use numbers! ")
          //this is where we loop our user into finally entering a valid entry
          while (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
              //the prompt for their re-entry
