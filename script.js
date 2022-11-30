@@ -7,28 +7,21 @@ function PWLengthCriteria() {
 
     //now i'm checking to see if what was entered meets the following criteria that would destroy the functionality of our code: if nothing was entered, smaller than 8, bigger than 128, and entering anything other than numbers
     if (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
-        //when this criteria is met then we need to alert the user and remind them not to enter either of these mistakes
-        alert("Listen buddy, I said to enter in a number from 8-128 and to only use numbers! ")
-        //this is where we loop our user into finally entering a valid entry
-        while (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
-            //the prompt for their re-entry
-            passwordLength= prompt("Enter your desired password length from 8-128 characters, make sure to only type numbers!");
-            
-            //we need to ensure that only when ALL criteria has been met that we allow oour user to move on
-            if (passwordLength < 7 && passwordLength > 129 && passwordLength != "" && !isNaN(passwordLength)){
+         //when this criteria is met then we need to alert the user and remind them not to enter either of these mistakes
+         alert("Listen buddy, I said to enter in a number from 8-128 and to only use numbers! ")
+         //this is where we loop our user into finally entering a valid entry
+         while (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
+             //the prompt for their re-entry
+             passwordLength= prompt("Enter your desired password length from 8-128 characters, make sure to only type numbers!");
+             //we need to ensure that only when ALL criteria has been met that we allow oour user to move on
+             if (passwordLength < 7 && passwordLength > 129 && passwordLength != "" && !isNaN(passwordLength)){
                 break;
-            }
+             }
 
         }
     }
 
 }
-
-    //if im understanding correctly we are going to add these characters of these arrays into a much bigger array
-    var parameterArray = [];
-    var passwordLength = 0;
-    var password = "";
-
 
 //in this section is where i need to actually have the password generate
 //i believe i have to create an array of which will get all of the characters specified in our previous functions 
@@ -45,21 +38,21 @@ function generatePassword() {
 
     //this loop here is what allows us to fill up our password parameter array with things that were actually selected
     while (parameterArray.length === 0) {
-        if (confirm("Would you like to add uppercase letters? ABC")) {
+        if (confirm("Would you like to add uppercase letters? ex: ABC")) {
             parameterArray = parameterArray.concat(upperCaseArray);
         }
-        if (confirm("Would you like to add lowercase letters? abc")) {
+        if (confirm("Would you like to add lowercase letters? ex: abc")) {
             parameterArray = parameterArray.concat(lowerCaseArray);
         }
-        if (confirm("Would you like to add numbers? 012")) {
+        if (confirm("Would you like to add numbers? ex: 012")) {
             parameterArray = parameterArray.concat(numbersArray);
         }
-        if (confirm("Would you like to add special characters? %&$")) {
+        if (confirm("Would you like to add special characters? ex: %&$")) {
             parameterArray = parameterArray.concat(specialCharArray);
         }
         //if nothing is selected then we need to make sure that we remind the user of this and have them loop through and pick through the options
         if (parameterArray.length === 0) {
-            alert("You must choose at least one type of character, ya goose. :P");
+            alert("You must choose at least one type of character, ya goose :P");
         }
     }
 
@@ -77,7 +70,13 @@ function generatePassword() {
     return password;
 }
 
+// Get references to the #generate element
+    var generateBtn = document.querySelector("#generate");
 
+    //if im understanding correctly we are going to add these characters of these arrays into a much bigger array
+    var parameterArray = [];
+    var passwordLength = 0;
+    var password = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -90,9 +89,8 @@ function writePassword() {
     passwordText.value = password;
 }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+
 // Add event listener to generate button
 //when this button is clicked then we will fire off the function for our writepassword that includes the generatepassword function and within that has the pwlength criteria function
-generateBtn.addEventListener("click", writePassword());
+generateBtn.addEventListener("click", writePassword);
 
