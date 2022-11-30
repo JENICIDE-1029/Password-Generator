@@ -12,7 +12,7 @@ function PWLengthCriteria() {
         //this is where we loop our user into finally entering a valid entry
         while (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
             //the prompt for their re-entry
-            prompt("Enter your desired password length from 8-128 characters, make sure to only type numbers!");
+            passwordLength= prompt("Enter your desired password length from 8-128 characters, make sure to only type numbers!");
             
             //we need to ensure that only when ALL criteria has been met that we allow oour user to move on
             if (passwordLength < 7 && passwordLength > 129 && passwordLength != "" && !isNaN(passwordLength)){
@@ -78,8 +78,6 @@ function generatePassword() {
 }
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -92,6 +90,8 @@ function writePassword() {
     passwordText.value = password;
 }
 
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 //when this button is clicked then we will fire off the function for our writepassword that includes the generatepassword function and within that has the pwlength criteria function
 generateBtn.addEventListener("click", writePassword());
