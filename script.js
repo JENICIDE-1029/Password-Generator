@@ -24,10 +24,9 @@ function PWLengthCriteria() {
 }
 
 //in this section is where i need to actually have the password generate
-//i believe i have to create an array of which will get all of the characters specified in our previous functions 
-//this is when we use math.floor and math.random multiplied by the length specified from our user
 function generatePassword() {
 
+    //since we have a global variable for our final array, we essentially dont need these filler arrays to be global because theylll be logged within a global 
     var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

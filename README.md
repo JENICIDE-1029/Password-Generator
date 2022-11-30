@@ -1,65 +1,18 @@
-// Assignment code here
+# Challenge3 - PASSWORD GENERATOR
 
-//ACCEPTANCE CRITERIA
+## Description
 
-// GIVEN I need a new, secure password
+This challenge was all about testing everything we've learned about javascript and applying cool techniques into something useful for us, which in this circustance is to generate a very random and secure password. However, I'd say that the real motivation behind this project is to get more comfortable with the programming process of how we write our pseudocode, design out our plan, and overall work out the bugs in our code to have something so simple yet complex work properly. I have previous expereince in Visual Basic and so I have an understanding on how our javascript is essentially just providing different criteria/functionality for when a set of parameters or events are set off. So, with that being said, I still found this project quite challenging in trying to fully wrap my head around achieveing the manner of which we created the final array that we would use to make our password. At the end of the day, I was really impressed with how this code works and am excited to see what's next!!! ahhh!!
 
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
+## Installation
 
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
+N/A
 
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
+## Usage
 
-// WHEN asked for character types to include in the password
-// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-//do we need loops during this time? I feel as though everything could get accomplished in if then statements 
-
-SO in one component I need to create a constructive function of which will contain a method/function that ensures at least 
-one item in the password criteria was entered before moving on
-
-in the next component I need to have another constructive function that defines the limitations of the character length 
-or perhaps it's just an if then statement where each criteria needs to be met before moving onto the last step 
-
-okay new plan 
-
-i will have an if then statement that defines if an item was selected among the first set of password criteria which will allow us to fill our password with the various character options selected and if nothing selcted then we need to tell them they need to select one and go through the options again, which i think may contain a loop 
-
-    so if the lowerCase option is OK then we want to generate an array wit
-
-then we have to call our functions 
-
-having the password written into the generator text box which i believe would need to be decalred earlier in the code to be within each item 
+To use this password generator, click on the generate password button to be prompted with an onset of pop-up windows that will obtain your entries in order to create your desired password which will be presented to you within the dashed border box
 
 
-okay new new plan
+![Screenshot of Website](assets/images/screenshot.png)
 
-i forgot to add this additional section where everything global is going to be defined and then used towards the end in the final component 
-
-first component is about looping through our various chracter password criteria to ensure that at least one is selected to input for our password parameter and if nothing is selcted then we will alert our user and have them answer each question again
-
-i believe that in a single loop i can verify if something was added along with error checking that something was selected 
-
-so furstly let's create a function 
-
-
-
-if ()
-
-
-then the second component is about looping through our character paramter for lenght and that the entry is in fact a number along with being within 8 and 128 long
-
-third component is about firing off all of our functions and generating our password 
-
-final component is changing the html to display the password within the textbox
-
-    this is where we do the mytitle.textcontent = generatedpassword
+!link to Website:https://jenicide-1029.github.io/Password-Generator/ 
