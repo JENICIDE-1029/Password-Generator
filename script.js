@@ -10,11 +10,11 @@ function PWLengthCriteria() {
          //when this criteria is met then we need to alert the user and remind them not to enter either of these mistakes
          alert("Listen buddy, I said to enter in a number from 8-128 and make sure to only use numbers! ")
          //this is where we loop our user into finally entering a valid entry
-         while (passwordLength == "" || passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)) {
+         while (passwordLength == "" || passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
              //the prompt for their re-entry
              passwordLength= prompt("Enter your desired password length from 8-128 characters, make sure to only type numbers!");
              //we need to ensure that only when ALL criteria has been met that we allow oour user to move on
-             if (passwordLength < 7 && passwordLength > 129 && passwordLength != "" && !isNaN(passwordLength)){
+             if (passwordLength < 8 && passwordLength > 128 && passwordLength != "" && !isNaN(passwordLength)){
                 break;
              }
 
